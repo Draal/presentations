@@ -1,0 +1,45 @@
+Common and/or nasty Go mistakes
+
+17:24 13 Jun 2018
+Tags: golang, mistakes, bugs
+
+Denys Misko
+Senior Software Developer, Autopilot
+denys@autopilothq.com
+https://www.autopilothq.com/
+@Draal
+
+
+* Interfaces are not only to mock entities in tests
+
+- use interfaces to change libraries call logic without changing them
+
+.play code/bodylimit.go
+
+* Interfaces are not only to mock entities in tests
+
+- use interfaces to write extendable libraries
+
+.play code/interfaces-library.go
+
+* Be careful with goroutine closures in loops
+
+.play code/goroutine-closure.go
+
+* Be careful with goroutine closures in loops (fixed)
+
+.play code/goroutine-closure-fix.go
+
+* Channels are cheap but not free
+
+.play code/channels-overusing.go
+
+* Channels are cheap but not free (optimized)
+
+.play code/channels-optimized.go
+
+* Always protect maps which might be written by locks
+
+It does crash, and it will in the most undesired moment
+
+.play code/unprotected-maps.go
